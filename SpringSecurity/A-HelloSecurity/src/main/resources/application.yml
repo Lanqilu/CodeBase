@@ -1,0 +1,6 @@
+#spring:
+#  security:
+#    user:
+#      # 设置登录系统的账号、密码
+#      name: halo
+#      password: halo
