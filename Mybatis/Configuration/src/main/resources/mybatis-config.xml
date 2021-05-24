@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--核心配置文件-->
+<configuration>
+    <!--此处密码不生效，优先使用配置文件-->
+    <properties resource="dp.properties">
+        <property name="password" value="111111"/>
+    </properties>
+
+    <!--取别名-->
+    <typeAliases>
+        <typeAlias type="com.halo.pojo.User" alias="User"/>
+        <!--<package name="com.halo.pojo"/>-->
+    </typeAliases>
+
+
+    <environments default="development">
+        <environment id="development">
+            <!--事物管理-->
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${driver}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!--每一个Mapper.xml 都需要在Mybatis核心配置文件中注册-->
+    <!--文件默认从resources文件夹中读取，在resources文件夹之外需要注册-->
+    <mappers>
+        <mapper resource="com/halo/mapper/UserMapper.xml"/>
+        <mapper class="com.halo.pojo.User"/>
+    </mappers>
+
+</configuration>
