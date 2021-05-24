@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address" class="top.whl.pojo.Address" scope="singleton">
+        <property name="address" value="浙江"/>
+    </bean>
+
+    <bean id="student" class="top.whl.pojo.Student">
+        <!--01 普通值注入直接使用value-->
+        <property name="name" value="whl"/>
+
+        <!--02 Bean注入使用ref-->
+        <property name="address" ref="address"/>
+
+        <!--03 数组注入-->
+        <property name="books">
+            <array>
+                <value>红楼梦</value>
+                <value>西游记</value>
+                <value>水浒传</value>
+                <value>三国演义</value>
+            </array>
+        </property>
+
+        <!--04 List注入-->
+        <property name="hobbies">
+            <list>
+                <value>篮球</value>
+                <value>足球</value>
+                <value>乒乓球</value>
+                <value>羽毛球</value>
+            </list>
+        </property>
+
+        <!--05 Map注入-->
+        <property name="card">
+            <map>
+                <entry key="学号" value="000000"/>
+                <entry key="身份证号" value="000000"/>
+                <entry key="银行卡号" value="000000"/>
+            </map>
+        </property>
+
+        <!--06 Set注入-->
+        <property name="games">
+            <set>
+                <value>LOL</value>
+                <value>CS</value>
+            </set>
+        </property>
+
+        <!--07 null注入-->
+        <property name="oh">
+            <null/>
+        </property>
+
+        <!--08 Properties-->
+        <property name="info">
+            <props >
+                <prop key="姓名">whl</prop>
+                <prop key="年龄">18</prop>
+                <prop key="性别">男</prop>
+                <prop key="driver">000</prop>
+                <prop key="url">000</prop>
+                <prop key="username">000</prop>
+                <prop key="password">000</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>

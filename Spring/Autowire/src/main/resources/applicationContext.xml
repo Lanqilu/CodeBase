@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/tool"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/tool http://www.springframework.org/schema/tool/spring-tool.xsd">
+
+    <import resource="annotation.xml"/>
+<!--    <bean id="cat" class="top.whl.pojo.Cat"/>
+    <bean id="dog" class="top.whl.pojo.Dog"/>
+    <bean id="person" class="top.whl.pojo.Person">
+        <property name="name" value="whl"/>
+        <property name="cat" ref="cat"/>
+        <property name="dog" ref="dog"/>
+    </bean>
+
+    <bean id="person2" class="top.whl.pojo.Person" autowire="byName"/>
+    <bean id="person3" class="top.whl.pojo.Person" autowire="byType"/>-->
+
+
+</beans>
+

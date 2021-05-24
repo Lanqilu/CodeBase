@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="user" class="top.whl.pojo.User" name="user3,u3 u4">
+        <property name="name" value="whl_property"/>
+        <!--index-->
+        <!--        <constructor-arg index="0" value="whl_constructor-arg_index"/>-->
+        <!--type-->
+        <!--        <constructor-arg type="java.lang.String" value="whl_constructor-arg_type"/>-->
+        <!--        <constructor-arg name="name" value="whl_constructor-arg_name"/>-->
+
+    </bean>
+    <!--别名-->
+    <alias name="user" alias="user2"/>
+</beans>

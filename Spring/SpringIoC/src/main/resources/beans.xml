@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="mysqlImpl" class="top.whl.dao.UserDaoMysqlImpl"/>
+
+    <bean id="UserServiceImpl" class="top.whl.service.UserServiceImpl">
+        <!--ref 引用Spring中创建好的对象-->
+        <property name="userDao" ref="mysqlImpl"/>
+    </bean>
+
+    <bean id="source" class="top.whl.pojo2.Source">
+        <property name="fruit" value="橙汁"/>
+        <property name="size" value="大杯"/>
+        <property name="sugar" value="少糖"/>
+    </bean>
+
+    <bean id="juiceMaker2" class="top.whl.pojo2.JuiceMaker2">
+        <property name="beverageShop" value="贡茶"/>
+        <property name="source" ref="source"/>
+    </bean>
+
+
+
+</beans>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--p命名空间注入直接注入属性的值 property-->
+    <bean id="user" class="top.whl.pojo.User" p:name="whl" p:age="18"/>
+
+    <!--c命名空间注入 constructor-->
+    <bean id="user2" class="top.whl.pojo.User" c:age="19" c:name="whl02"/>
+
+    <bean id="singleton" class="top.whl.pojo.User" scope="singleton"/>
+    <bean id="prototype" class="top.whl.pojo.User" scope="prototype"/>
+    <bean id="user3" class="top.whl.pojo.User" scope="request"/>
+
+</beans>
