@@ -2,7 +2,7 @@
 """
 @author lanqilu
 @date Created in 2020/07/29  16:10
-@file 0575.分糖果.py
+@file q0575_分糖果.py
 @description 
 """
 
