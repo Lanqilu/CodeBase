@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background: #2c3e50;
+
+            /* 使用 Flex 布局居中 */
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+        }
+
+        main {
+            position: absolute;
+
+            /* 使用 定位 居中 */
+            /* left: 50%;
+            top: 50%;
+            margin-left: -200px;
+            margin-top: -200px; */
+
+            /* 使用 transform 居中 */
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 400px;
+            height: 400px;
+            border: solid 5px silver;
+
+        }
+
+        div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            left: 50%;
+            top: 50%;
+            margin-left: -100px;
+            margin-top: -100px;
+        }
+
+        div:nth-child(1) {
+            background: #2980b9;
+            transition: 0.75s;
+        }
+
+        div:nth-child(2) {
+            background: #8e44ad;
+            transition: 0.75s;
+        }
+
+
+        main:hover div:nth-child(1) {
+            /* transform: translateX(-200px) translateY(-200px); */
+            /* 以上可以简写为 */
+            transform: translate(-200px, -200px);
+        }
+
+        main:hover div:nth-child(2) {
+            transform: translateX(200px) translateY(200px);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </main>
+</body>
+
+</html>

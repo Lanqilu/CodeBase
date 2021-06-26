@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            background: #2c3e50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn {
+            font-size: 1.2em;
+            color: #ecf0f1;
+            text-decoration: none;
+            width: 200px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #2980b9;
+            position: relative;
+            transform: skewX(25deg) rotate(-15deg);
+            letter-spacing: 0.2em;
+        }
+
+        .btn::before {
+            content: '';
+            width: 10px;
+            height: 100%;
+            left: -10px;
+            background: #7f8c8d;
+            position: absolute;
+            transform: skewY(-45deg) translate(0, 5px);
+        }
+
+        .btn::after {
+            content: '';
+            width: 100%;
+            height: 10px;
+            bottom: -10px;
+            background: #7f8c8d;
+            position: absolute;
+            transform: skewX(-45deg) translate(-5px, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <a href="" class="btn">
+            HALO
+        </a>
+    </main>
+</body>
+
+</html>

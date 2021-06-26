@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-self: center;
+            align-items: center;
+            background: #2c3e50;
+        }
+
+        main {
+            display: flex;
+            justify-self: center;
+            align-items: center;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            margin-right: 20px;
+            overflow: hidden;
+            border: solid 2px #95a5a6;
+            transition: 0.75s;
+        }
+
+        div>img {
+            height: 100%;
+
+        }
+
+        main:hover div {
+            transform: scale(0.6);
+            filter: blur(3px);
+        }
+
+        main:hover div:hover {
+            transform: scale(1.6);
+            filter: none;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div>
+            <img src="https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-icon-a@master/spring.1ra9xtxvcxeo.svg" alt="">
+        </div>
+        <div>
+            <img src="https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-icon-a@master/spring.1ra9xtxvcxeo.svg" alt="">
+        </div>
+        <div><img src="https://cdn.jsdelivr.net/gh/halo-blog/cdn-blog-icon-a@master/spring.1ra9xtxvcxeo.svg" alt="">
+        </div>
+    </main>
+</body>
+
+</html>

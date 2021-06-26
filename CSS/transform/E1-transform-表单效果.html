@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background: #2c3e50;
+        }
+
+        main {
+            position: absolute;
+
+
+            /* 使用 transform 居中 */
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 400px;
+            height: 400px;
+            border: solid 5px silver;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .field {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .field::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            height: 2px;
+            bottom: 0;
+            width: 100%;
+            background: linear-gradient(to right,
+                    #bdc3c7, #e67e22, #16a085, #95a5a6, #2c3e50, #bdc3c7);
+            transform: translateX(-100%);
+            transition: 2s;
+        }
+
+        .field:hover::before {
+            transform: translate(100%);
+        }
+
+        .field input {
+            border: none;
+            outline: none;
+            background: #bdc3c7;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="field"><input type="text" placeholder="账号"></div>
+        <div class="field"><input type="text" placeholder="密码"></div>
+    </main>
+</body>
+
+</html>
