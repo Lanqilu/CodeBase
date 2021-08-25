@@ -16,6 +16,7 @@ public interface SortAlgorithm {
      * @param unsorted - an array should be sorted
      * @return a sorted array
      */
+    @SuppressWarnings("unchecked")
     <T extends Comparable<T>> T[] sort(T[] unsorted);
 
     /**

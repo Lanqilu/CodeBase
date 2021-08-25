@@ -1,4 +1,4 @@
-package queue;
+package queues;
 
 import java.util.Scanner;
 
@@ -10,8 +10,8 @@ import java.util.Scanner;
  **/
 public class ArrayQueueDemo {
     public static void main(String[] args) {
-        //测试
-        //创建队列
+        // 测试
+        // 创建队列
         ArrayQueue queue = new ArrayQueue(3);
         char key = ' ';//接收用户输入
         Scanner scanner = new Scanner(System.in);
@@ -63,14 +63,14 @@ public class ArrayQueueDemo {
 }
 
 
-//编写一个数组模拟队列
+// 编写一个数组模拟队列
 class ArrayQueue {
     private int maxSize;//数组的最大容量
     private int front;//指向队列头
     private int rear;//指向队列尾部
     private int[] arr;//模拟队列的数组
 
-    //创建队列的构造器
+    // 创建队列的构造器
     public ArrayQueue(int arrMaxSize) {
         maxSize = arrMaxSize;
         arr = new int[maxSize];
@@ -78,17 +78,17 @@ class ArrayQueue {
         rear = -1;//包含队列尾，队列的最后一个数据
     }
 
-    //判断队列是否满
+    // 判断队列是否满
     public boolean isFull() {
         return rear == maxSize - 1;
     }
 
-    //判断队列是否为空
+    // 判断队列是否为空
     public boolean isEmpty() {
         return rear == front;
     }
 
-    //数据进队列
+    // 数据进队列
     public void addQueue(int n) {
         //判断队列是否满
         if (isFull()) {
@@ -96,13 +96,13 @@ class ArrayQueue {
             return;
         }
 
-        rear++;//rear后移
+        rear++;// rear后移
         arr[rear] = n;
     }
 
-    //数据出队列
+    // 数据出队列
     public int getQueue() {
-        //判断队列是否为空
+        // 判断队列是否为空
         if (isEmpty()) {
             throw new RuntimeException("队列为空");
         }
@@ -111,9 +111,9 @@ class ArrayQueue {
         return arr[front];
     }
 
-    //显示队列的所有数据
+    // 显示队列的所有数据
     public void showQueue() {
-        //遍历
+        // 遍历
         if (isEmpty()) {
             System.out.println("队列为空");
         }
@@ -123,7 +123,7 @@ class ArrayQueue {
         }
     }
 
-    //显示队列的头数据
+    // 显示队列的头数据
     public int headQueue() {
         if (isEmpty()) {
             throw new RuntimeException("队列为空");
@@ -132,6 +132,6 @@ class ArrayQueue {
 
     }
 
-    //存在问题
-    //不是环形队列，只能使用一次
+    // 存在问题
+    // 不是环形队列，只能使用一次
 }
